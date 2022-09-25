@@ -80,23 +80,40 @@
     const { useState, useEffect, useRef, useCallback, useMemo, useReducer, Fragment } = React;
 
     function HelloContainer({...props}) {
+        const [mesgOfProps, setMesgOfProps] = useState('Hello, Props!!!!')
+
+        const callback = useCallback( (param)=>{
+
+            setMesgOfProps('자식에서 값을 바꿈')
+
+        }, [mesgOfProps]);
+
 
         return (
             <div>
-                <HelloReact mesgOfProps={"Hello, Props!!!"}></HelloReact>
+                <HelloReact
+                    mesgOfProps={mesgOfProps}
+                    callback={callback}
+                ></HelloReact>
             </div>
         )
     }
 
-    function HelloReact({...props}) {
-        const [mesgOfState, set변수명] = useState('Hello, Start!!!');
+    function HelloReact({mesgOfProps, callback}) {
+        const [mesgOfState, setMesgOfState] = useState('Hello, Start!!!');
+        const handler = (event)=>{
+            callback()
+        };
+
         return (
             <div>
                 도전1. Hello, React!!!
                 <br />
                 도전2. {mesgOfState}
                 <br />
-                도전3. {props.mesgOfProps}
+                도전3. {mesgOfProps}
+                <hr />
+                <button onClick={handler}> 부모의 callback 메서드 호출</button>
             </div>
         )
     }
