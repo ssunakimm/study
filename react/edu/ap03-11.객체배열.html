@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>객체 배열 학습</title>
+</head>
+
+<body>
+    <div>
+        <h2>Object Arrary 대해서 학습한다.</h2>
+        <ol>
+            <li class="langjs">
+                <h3 class="langjs">Object Arrary 생성</h3>
+                <pre class="langjs">
+                    <code class="langjs">
+    const objarray = [
+        { text: 'One', value: 'A' },
+        { text: 'Two', value: 'B' },
+        { text: 'Three', value: 'C' }
+    ];
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">objarray 에 { text: 'Four', value: 'D' } 를 추가하시오. length 프로퍼티를 사용하여 추가.</h3>
+                <pre class="langjs">
+                    <code class="langjs">
+
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">objarray 에서 { text: 'Two', value: 'B' } 를 { text: '2', value: '2' } 로 바꾸시오.</h3>
+                <pre class="langjs">
+                    <code class="langjs">
+
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">objarray 에서 { text: 'Two', value: 'B' } 를 findIndex 를 이용하여 { text: 'Two', value: 'B' } 를 index를 찾고
+                    { text: '2', value: '2' } 로 바꾸시오
+                </h3>
+                <pre class="langjs">
+                    <code class="langjs">
+
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">objarray 에서 filter 메서드를 사용하여 text의 값이 'One' 인 객체들을 찾아서 console.log 로 출력하시오</h3>
+                <pre class="langjs">
+                    <code class="langjs">
+
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">objarray 에서  filter 메서드를 사용하여 { text: 'Three', value: 'C' } 를 삭제하시오.</h3>
+                <pre class="langjs">
+                    <code class="langjs">
+
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">objarray 에서 map 메서드를 사용하여 no 프로퍼티 추가하시오</h3>
+                <pre class="langjs">
+                    <code class="langjs">
+    [
+        { text: 'One', value: 'A', no:0 },
+        { text: '2', value: '2', no:1  },
+        { text: 'Four', value: 'D', no:2  },
+    ]
+                    </code>
+                </pre>
+            </li>
+            <li class="langjs">
+                <h3 class="langjs">
+                    objarray 에서 reduce 메서드를 사용하여 각 요소의 value 프로퍼티 를 합쳐서 하나의 문자열로 만드시오
+                    <br>
+                    map을 이용하여 value 값만 들어있는 배열을 만들고 reduce를 이용하여 하나의 문자열로 만든다.
+                </h3>
+                <pre class="langjs">
+                    <code class="langjs">
+    A2D 가 출력
+                    </code>
+                </pre>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
+<script>
+
+//  1번
+    const objarray = [
+        { text: 'One', value: 'A' },
+        { text: 'Two', value: 'B' },
+        { text: 'Three', value: 'C' }
+    ];
+    
+//    2번
+//    objarray[objarray.length] = { text: 'Four', value: 'D' }
+//    console.log(objarray)
+
+//    3번
+//    objarray[1] = { text: '2', value: '2' }
+//    console.log(objarray)
+    
+//    4번    
+//    var index = objarray.findIndex((item)=>{
+//        if(item.text == 'Two' && item.value == 'B') return item
+//    })
+//    console.log(index)
+//    objarray[index] = { text: '2', value: '2' }
+//    console.log(objarray)
+    
+//    5번  
+//    var find = objarray.filter((item)=>{
+//        if(item.text == 'One') return true
+//    })
+//    console.log(find)
+    
+//    6번
+//    var find = objarray.filter((item)=>{
+//        if(item.text == 'Three' && item.value == 'C') return false
+//        else return true
+//    })
+//    console.log(find)
+    
+    
+//    7번
+//    var map = objarray.map((item, index)=>{
+//        item.no = index
+//        return item
+//    })
+//    console.log(map)
+    
+//    8번
+//    const objarray2 = [
+//        { text: 'One', value: 'A', no:0 },
+//        { text: '2', value: '2', no:1  },
+//        { text: 'Four', value: 'D', no:2  },
+//    ]
+//    var reduce = objarray2.reduce((sum,elt, i, array)=>{
+//        var arr = array[i].value        
+//        return sum + arr
+//    },'')
+//    console.log(reduce)
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
