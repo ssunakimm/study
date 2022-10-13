@@ -155,6 +155,50 @@
     
     
     
+    
+    objarray[objarray.length] = { text: 'Four', value: 'D' } 
+    
+    
+    var find = objarray.findIndex((item)=>{
+        if(item.text == 'Two'){
+            return item
+        }
+    })
+    objarray[find] = { text: '2', value: '2' }
+    
+    var filter = objarray.filter((item)=>{
+        if(item.text == 'Three') {
+            return false 
+        }else {
+            return true
+        }
+    })
+    var map = objarray.map((obj,number,index)=>{
+        obj.no = number
+        return obj
+    }) 
+    
+    
+    var reduce = objarray.reduce((obj,obj2,num,arr)=>{
+        var arr = arr[num].value
+        return obj + arr                     
+    },'')
+    
+    console.log(reduce)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </script>
 
 
