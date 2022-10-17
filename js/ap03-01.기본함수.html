@@ -281,7 +281,30 @@
     
     const str1 = "안녕하세요, 오늘은 10월 nn일 입니다."
     str1.length //23
-    str1.indexOf('녕')
+    str1.indexOf('안') //0
+    str1.indexOf('녕') //1
+    str1.slice(0,5) //안녕하세요.
+    
+    str1.substring(0,2)//안녕 0부터 2까지
+    
+    const arr = [1,2,3,4,5]
+    arr.push(6,7)
+    arr.shift() //2,3,4,5,6,7 맨처음거 제거
+    arr.pop() //배열 끝 요소를 제거하고, 제거한 요소를 반환합니다.
+    arr.unshift(0)
+    console.log(arr)
+    
+    
+    arr.concat(2,3)
+    
+    let str = "my-short-string";
+    str = str.split("-")
+    var strResult = str.map((word, i)=>{
+        return i == 0? word : word[0].toUpperCase()+word.slice(1);
+    })    
+    console.log(strResult.join(''))
+    
+    
     
 </script>
 
