@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>기본 학습 내용</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        html, body {font-family: 'Noto Sans KR', sans-serif;}
+        pre {font-family: 'Noto Sans KR', sans-serif;line-height: 1;}
+    </style>
+</head>
+<body>
+    <pre>
+    <h1>Check List</h1>
+    1. 변수
+
+    - var는 몰라도 된다.
+
+    - let과 const를 익힌다.
+
+    <a href="https://ko.javascript.info/variables" target="_blank">https://ko.javascript.info/variables</a>
+
+
+
+    2. 자료형
+
+    - string, number, boolean, undefined, null, object
+
+    <a href="https://ko.javascript.info/types" target="_blank">https://ko.javascript.info/types</a>
+
+
+
+    3. 형 변환
+
+    - string과 number를 더하면 string이 된다.
+
+    - String(), Number()
+
+    <a href="https://ko.javascript.info/type-conversions" target="_blank">https://ko.javascript.info/type-conversions</a>
+
+
+
+    4. 기본 연산자
+
+    - +, -, *, /, %, =
+
+    - 일반적인 수학과 달리 변수에 값을 넣을 때 쓰는 = 연산자에 익숙해져야 한다.
+
+    <a href="https://ko.javascript.info/operators" target="_blank">https://ko.javascript.info/operators</a>
+
+
+
+    5. 비교 연산자
+
+    - >, <, >=, <=, ===
+
+    - ==은 절대로 사용하지 않는다.
+
+    <a href="https://ko.javascript.info/comparison" target="_blank">https://ko.javascript.info/comparison</a>
+
+
+
+    6. if문
+
+    - truthy, falsy
+
+    - if문의 괄호 안에 숫자가 들어가는 경우 0 때문에 통과되지 않을 수 있다는 것을 잘 기억해야 한다.
+
+    <a href="https://ko.javascript.info/ifelse" target="_blank">https://ko.javascript.info/ifelse</a>
+
+
+
+    7. 논리 연산자
+
+    - ||, &&, !
+
+    <a href="https://ko.javascript.info/logical-operators" target="_blank">https://ko.javascript.info/logical-operators</a>
+
+
+
+    8. while문과 for문
+
+    - while, for 기본 사용법
+
+    - break, continue
+
+    <a href="https://ko.javascript.info/while-for" target="_blank">https://ko.javascript.info/while-for</a>
+
+
+
+    9. 함수
+
+    - 함수 선언 방식, 함수 표현식
+
+    - 지역변수, 외부변수, 전역변수, 매개변수
+
+    - return
+
+    <a href="https://ko.javascript.info/function-basics" target="_blank">https://ko.javascript.info/function-basics</a>
+
+    <a href="https://ko.javascript.info/function-expressions" target="_blank">https://ko.javascript.info/function-expressions</a>
+
+
+
+    10. 객체
+
+    - 객체를 생성하는 방법
+
+      - 중괄호({})를 이용한 방법
+
+      - new 키워드를 이용한 방법
+
+    - 객체의 값을 불러오는 방법
+
+      - 점(.)을 이용한 방법
+
+      - 대괄호([])를 이용한 방법
+
+    - 객체의 값을 넣거나 수정하는 방법
+
+    - for-in문
+
+    <a href="https://ko.javascript.info/object" target="_blank">https://ko.javascript.info/object</a>
+
+
+
+    - 원시값과 달리 객체가 어떤 식으로 복사되는지를 알아야 한다.
+
+    (객체를 담고 있는 변수는 사실 객체가 저장된 곳의 주소값을 저장하고 있다.)
+
+    - Object.assign을 이용한 객체 복사
+
+    (객체의 값에 객체가 있는 경우 lodash의 cloneDeep을 대신 사용해야 한다.)
+
+    <a href="https://ko.javascript.info/object-copy" target="_blank">https://ko.javascript.info/object-copy</a>
+
+
+
+    - 메소드를 만드는 방법
+
+    - 실행 환경에 따라 달라지는 this
+
+    <a href="https://ko.javascript.info/object-methods" target="_blank">https://ko.javascript.info/object-methods</a>
+
+
+
+    11. 타입 변환 메소드
+
+    - Number()
+
+    - String()
+
+    - Boolean()
+
+    <a href="https://ko.javascript.info/primitives-methods" target="_blank">https://ko.javascript.info/primitives-methods</a>
+
+
+
+    12.  Number 메소드
+
+    - Math.floor()
+
+    - Math.ceil()
+
+    - Math.round()
+
+    <a href="https://ko.javascript.info/number" target="_blank">https://ko.javascript.info/number</a>
+
+
+
+    13. String 메소드
+
+    - 특정 위치의 글자를 읽는 방법
+
+    - str.length
+
+    - str.indexOf()
+
+    - str.slice()
+
+    - str.substring()
+
+    <a href="https://ko.javascript.info/string" target="_blank">https://ko.javascript.info/string</a>
+
+
+
+    14. 배열
+
+    - 대괄호([])로 배열을 생성하는 방법
+
+    - 배열의 값을 불러오는 방법
+
+    - 배열의 값을 수정하는 방법
+
+    - length를 이용해서 배열의 길이를 구하는 방법
+
+    - 메소드
+
+      - push()
+
+      - shift()
+
+      - pop()
+
+      - unshift()
+
+    <a href="https://ko.javascript.info/array" target="_blank">https://ko.javascript.info/array</a>
+
+
+
+      - splice()
+
+      - slice()
+
+      - concat()
+
+      - forEach()
+
+      - indexOf()
+
+      - includes()
+
+      - find()
+
+      - filter()
+
+      - map()
+
+      - sort()
+
+      - reverse()
+
+      - join()
+
+        - split() : string 메소드
+
+      - reduce()
+
+    <a href="https://ko.javascript.info/array-methods" target="_blank">https://ko.javascript.info/array-methods</a>
+    </pre>
+</body>
+
+</html>
