@@ -21,7 +21,7 @@
     - let과 const를 익힌다.
 
     <a href="https://ko.javascript.info/variables" target="_blank">https://ko.javascript.info/variables</a>
-
+    
 
 
     2. 자료형
@@ -39,7 +39,7 @@
     - String(), Number()
 
     <a href="https://ko.javascript.info/type-conversions" target="_blank">https://ko.javascript.info/type-conversions</a>
-
+    
 
 
     4. 기본 연산자
@@ -241,5 +241,43 @@
     <a href="https://ko.javascript.info/array-methods" target="_blank">https://ko.javascript.info/array-methods</a>
     </pre>
 </body>
-
 </html>
+<script>
+    //3번
+    const strNum = "안녕하세요" + 1017        
+    console.log(typeof(strNum))
+
+    //10번
+    const obj = {
+        "name" : "kim",
+        "age" : 31
+    }
+    console.log(obj)
+    
+    /* 생성자함수 */
+    function Obj(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    const obj2  = new Obj("길순",31)
+    const obj3  = new Obj("길동",42)
+    console.log(obj2,obj3)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
