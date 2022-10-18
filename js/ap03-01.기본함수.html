@@ -305,6 +305,168 @@
     console.log(strResult.join(''))
     
     
+    //과제
+//    alert('자바스크립트')
+//    
+//    var admin;
+//    var name;
+//    
+//    name = "John"
+//    admin = name;
+//    alert(admin)
+    
+    
+    
+//  
+//    var val = window.prompt('이름을 알려주세요','')
+//    alert(val)
+    
+    
+//    let a = prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 1);
+//    let b = prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2);
+//
+//    a = parseInt(a)
+//    b = parseInt(b)
+//    alert(parseInt(a + b)); // 12
+    
+    
+//    let a = prompt('자바스크립트의 공식 이름은 무엇일까요?' , '')
+//    if(a === "EC"){
+//        alert('정답입니다.')
+//    }else {
+//        alert('모르셧나용')
+//    }
+    
+//    let result= (a+b<4) ?  '미만' : '이상'   
+    
+    for(var i = 2 ; i < 11 ; i++){
+        if(i % 2 == 0) {
+        console.log(i)
+            }
+    }
+    
+    function min(a,b){
+        const aa = a > b ?  b:a
+        return aa
+    }
+    min(2,3)
+    
+    const user = {}
+    user.name = "John"
+    user.surname = "Smith"
+    user.name = "Pete"
+    delete user.name
+    console.log(user)
+    
+ 
+   
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
+    }
+    
+    sum(salaries)
+    function sum(val){
+        for(key in val){
+            console.log(val[key])
+        }
+    }
+    
+    
+    let menu = {
+      width: 200,
+      height: 300,
+      title: "My menu"
+    };
+
+    multiplyNumeric(menu);
+    function multiplyNumeric(menu){
+        for(key in menu){
+            console.log(menu[key]*2)
+        }
+    }
+    
+    
+
+    
+    ucFirst("john")
+    function ucFirst(txt){
+        return txt[0].toUpperCase() + txt.slice(1)
+    }
+    
+    
+    checkSpam('buy ViAgRA now')
+    function checkSpam(str) {
+      let lowerStr = str.toLowerCase();
+
+      return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+    }
+    
+    function truncate(str, maxNum){
+        if(str.length > maxNum){
+            str = str.slice(0,maxNum) + "..."
+            return str
+        }else {
+            return str
+        }
+    }
+    
+    
+    var array = ["Jazz","Blues"];
+    array.push("Rock-n-Roll");
+    array.push("Rock-n-Roll");
+    array.push("Rock-n-Roll");
+    array.push("Rock-n-Roll");
+    array.push("Rock-n-Roll");
+    array[Math.floor((array.length - 1) / 2)] = "Classics"
+    console.log(array)
+    
+    
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 28 };
+
+//    let arr = [ pete, john, mary ];
+//
+//    sortByAge(arr);
+//
+//    // now: [john, mary, pete]
+//    alert(arr[0].name); // John
+//    alert(arr[1].name); // Mary
+//    alert(arr[2].name); // Pete
+//    
+//    sortByAge(arr){
+//        arr.sort((a,b)=>{
+//            a.age - b.age
+//        })
+//    }
+//    
+    
+    
+    
+    
+    
+    let arr1 = ["HTML", "JavaScript", "CSS"];
+
+    let sorted = copySorted(arr1);
+
+    alert( sorted ); // CSS, HTML, JavaScript
+    alert( arr1 );
+    function copySorted(arr) {
+        arr.map((item)=>{
+            return item.slice().sort()
+            
+            
+        })
+    }
+    
+    
+    
+    
+    
+    
+    
     
 </script>
 
