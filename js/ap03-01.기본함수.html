@@ -444,22 +444,19 @@
 //    
     
     
+    let hap = [1,2,3,4,5]
+    
+    let hapResult = hap.filter((num)=> num % 2 ==0 ? false : num);
+    let hapHResult = hapResult.reduce((pval,vval)=>{
+        return pval + vval
+    },0)
+    
+    console.log(hapHResult)
     
     
+   
     
-    let arr1 = ["HTML", "JavaScript", "CSS"];
-
-    let sorted = copySorted(arr1);
-
-    alert( sorted ); // CSS, HTML, JavaScript
-    alert( arr1 );
-    function copySorted(arr) {
-        arr.map((item)=>{
-            return item.slice().sort()
-            
-            
-        })
-    }
+    
     
     
     
