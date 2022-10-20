@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <style>
+      li {
+        list-style: disc;
+      }
+
+      .sidebar {
+        margin: 2vh 0;
+        padding: 4vh 0;
+        background-color: lightblue;
+      }
+
+      .clickme {
+        margin: 2vh 0;
+        padding: 4vh 0;
+        background-color: lightsalmon;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre>
+    React.createElement() 를 사용하여 리액트 엘리먼트를 만들어 보자.
+    페이지 96~98 참조
+    </pre>
+
+    <div id="app"></div>
+  </body>
+</html>
+
+<script src="https://unpkg.com/@babel/standalone/babel.js" crossorigin="anonymous">
+  /* 자바스크립트로 컴파일러. ES6-->ES5, JSX-->ES5 */
+</script>
+<script src="http://unpkg.com/react@17/umd/react.development.js" crossorigin="anonymous">
+  /* import React, { Component, PureComponent } from 'react' */
+</script>
+<script src="http://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin="anonymous">
+  /* import ReactDOM from 'react-dom' */
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.js" crossorigin="anonymous"></script>
+<script src="http://unpkg.com/react-is@17/umd/react-is.development.js" crossorigin="anonymous"></script>
+<script src="http://unpkg.com/styled-components@5/dist/styled-components.js" crossorigin="anonymous">
+  /*  import styled, { css } from 'styled-components' */
+</script>
+<script type="text/babel">
+  const { useState, useEffect, useRef, useCallback, useMemo, useReducer, Fragment } = React;
+
+  ReactDOM.render(<MyDiv></MyDiv>, document.getElementById('app'));
+
+  function MyDiv({}) {
+    // JSX로 화면 만들기. 조건부 렌더링: https://ko.reactjs.org/docs/conditional-rendering.html
+    /*
+    return (
+      <div id="mydiv3">
+          <section class="a">
+              Do it!
+          </section>
+          <p>
+              출간
+          </p>
+      </div>
+    )
+    */
+    return React.createElement(
+      'div',
+      { id: 'mydiv3' },
+      React.createElement('section', { className: 'a' }, 'Do it! 2222'),
+      React.createElement('p', {}, '출간 2222'),
+    );
+  }
+</script>
