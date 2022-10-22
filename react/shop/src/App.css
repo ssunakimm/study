@@ -211,6 +211,8 @@ input:-webkit-autofill {
 
 section {
     position: relative;
+    max-width: 1600px;
+    margin:0 auto;
 }
 
 section h3 {
