@@ -171,6 +171,7 @@ input:-webkit-autofill {
     left: 0;
     right: 0;
     width: 100%;
+    background-color:rgba(255,255,255,0.5);
     z-index: 99
 }
 
@@ -193,20 +194,27 @@ input:-webkit-autofill {
 }
 
 .header nav ul li {
-    display: inline-block
+    display: inline-block;
+    vertical-align:top;
 }
 
 .header nav ul li a {
     display: block;
     padding: 2.5rem 4rem;
     font-size: 1rem;
-    color: #000
+    color: #000;
+    line-height:1;
 }
 .header nav ul li ul.subDep {
-  display: none;
+  padding:1rem 0;
+}
+.header nav ul li ul.subDep li {
+  display: block;
 }
 .header nav ul li ul.subDep li a {
-  padding:1rem
+  padding:1rem;
+  font-size: 0.85rem;
+  color:#333;
 }
 
 section {

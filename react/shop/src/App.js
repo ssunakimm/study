@@ -6,7 +6,8 @@ import Slider from "react-slick";
 
 
 function App() {
-  let [item] = useState(data)
+  let [item] = useState(data);
+  const [isHovering, setIsHovering] = useState(0);
   const settings = {
     dots: true,
     arrows: false,
@@ -15,31 +16,40 @@ function App() {
     speed: 500,
     
   };
+
   return (
     <div className="wrapper">
       <header className='header'>
         <h1><a href="dd"><img src="/logo.svg" alt="론론"/></a></h1>
-        <nav>
+        <nav onMouseOver={() => setIsHovering(1)} onMouseOut={() => setIsHovering(0)}>
           <ul>
             <li>
-              <a href="dd">About</a>
+              <a href="dd" >About</a>
             </li>
             <li>
-              <a href="dd">Shop</a>
-              <ul className='subDep'>
-                <li><a href="dd">New in</a></li>
-                <li><a href="dd">Outer</a></li>
-                <li><a href="dd">Top</a></li>
-                <li><a href="dd">Bottom</a></li>
-              </ul>
+              <a href="dd" >Shop</a>
+              {
+                isHovering ? 
+                <ul className='subDep'>
+                  <li><a href="dd">New in</a></li>
+                  <li><a href="dd">Outer</a></li>
+                  <li><a href="dd">Top</a></li>
+                  <li><a href="dd">Bottom</a></li>
+                </ul> : null
+              }
+              
             </li>
             <li>
               <a href="dd">Board</a>
-              <ul className='subDep'>
-                <li><a href="dd">News</a></li>
-                <li><a href="dd">Q&A</a></li>
-                <li><a href="dd">Review</a></li>
-              </ul>
+              {
+                isHovering ? 
+                <ul className='subDep'>
+                  <li><a href="dd">News</a></li>
+                  <li><a href="dd">Q&A</a></li>
+                  <li><a href="dd">Review</a></li>
+                </ul> : null
+              }
+              
             </li>
           </ul>
         </nav>
