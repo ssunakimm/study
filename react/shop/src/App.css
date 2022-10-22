@@ -85,6 +85,7 @@ input[type=text]::-ms-clear {
 }
 
 img {
+    width:100%;
     border: 0
 }
 
@@ -175,16 +176,12 @@ input:-webkit-autofill {
 
 .header h1 {
     position: absolute;
-    top: 18px;
-    left: 18px
+    top: 83vh;
+    left: 2.5vw
 }
 
 .header h1 a {
     display: block;
-    width: 24px;
-    height: 24px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAAEgBckRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LjljY2M0ZGU5MywgMjAyMi8wMy8xNC0xNDowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjMgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJDQTUzMzlEMEVGNTExRUQ4OUVEQjdCNUNCMUM2NUQzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJDQTUzMzlFMEVGNTExRUQ4OUVEQjdCNUNCMUM2NUQzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkNBNTMzOUIwRUY1MTFFRDg5RURCN0I1Q0IxQzY1RDMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkNBNTMzOUMwRUY1MTFFRDg5RURCN0I1Q0IxQzY1RDMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4Ke4mWAAADyUlEQVR42mL4//8/AxK+CmOzMCDAfyBmhNFMaIIMMEmQhDWSIAwwMoLMwwaYGHAAgAAiXQdeiTJCOniB+CpBowACCJerUIIHn6P+IwUXMv0fXQO6QgyXwNTBYqkch03ohjDi8hwfVOE1XMFEyClwABBADGgpCoZ9cYhj1RADxCJAvIMYDbFALIzE345PQzwQC2ExdSs2DQloJqPjHcgakoD4GB7FMAwC4GDdwkA8qIDpRrah6j8CYNiATQOywhRsTiIJ0F4DQAAxEBGcMBwN9cduLAHCQEraw5a8/mNJCNuJsQifZBwOg9HxNnwWYRNMgGoQJCH4YHngPz4LEol0MSGMEnSgVJEJLbM0gPg4EL9loAx4QunlsIppOrSootRgdBCJr1DFVlEoA7EwFAsA8R0gTiakkYUEF70C4s9I/J94Cm8KcibNsz4FRYXWf/wAPTm24FH7D6YOIIBITeNnoRmRaD2kBNFfIP4OxPOBuIhYTSwkGH4aiG2AmBuIv0BTUC81iuu/QHwcTYwLGtbFlBbX2AxHt6SEXAv+EVG/wywpJdUCkOFHiUwpnFBLCom1gBTD0S0pImQByPATZNYD3NgiHt3w4xRWNhipC7nV859Cw2F4E3LqAmW0X0C8HakmogaYAcTdQMwMKiqagNiLymXoNyDmB+KzIAtaaFRQfwLiPcQWdv+g1SYy7qFWYecLbRCoIKlnBeLnQFxCDQuYoAnhIzk14dCvk0ctoIoF/4lpweHqliMn069oIwPIYBaWjMeAR709jAEQYAxUKkHRcQQQ/0JrjOXTwi5qGxgDbYj8h1aMAkDMBh0s+I+rVh0MHkB3uDCOGhvZI8WDwQOxSA4/TmT3lAupG0qwWUgrD8RBmzj/oU1LYTKbN9uQPFJKDw/EozlciArJAN0jhbTwALLDj1LJ4diazltJ9QghBQlIDj9CxtgOuc1zokstXBKJSA4/QYWxI3KTFsFSC5/DHwCx2AA4HFuMXMRVaqEP/4HAD6RMyjBIMKyv9BM9RkCNobPQUY3j0LZLFcPgBROhDa3t0E7JNZCDjSkYu6M3YIbSXrRyrCoQy+NpRYJi/AkQX6eWhdTygDYQn4d2B0Ed1j94QpAfyrYD4sODpcehAnX8MyCWQRpzRsdCSJN+6kNjpHfID1WPemDUA6MeoCnAVg98h9KyQJwCHeLAN67yA2mY4zeeOgA2XPILynaGjqRyEnDjH2gxDZulQx3AwbHYxAeIm4FYBDpRQ2gQCIR3AnExtCLDB9iBuA2IgxkQC1oINR8+QfUsRZcEAG8JiqEYEIzoAAAAAElFTkSuQmCC) no-repeat;
-    background-size: cover
 }
 
 .header nav {
@@ -201,7 +198,7 @@ input:-webkit-autofill {
 
 .header nav ul li a {
     display: block;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 4rem;
     font-size: 1rem;
     color: #000
 }
@@ -224,8 +221,16 @@ section h3 {
 }
 
 .visual {
-  padding-top: 6rem;;
+  margin-bottom: 5%;
+  padding-top: 6rem;
 }
+.visual .slick-dots { position:absolute; left:50%; bottom:4vw; display:block; transform:translateX(-50%); }
+.visual .slick-dots li { position:relative; display:inline-block; cursor:pointer;margin-right: 1rem }
+.visual .slick-dots li:last-child {margin-right: 0;}
+.visual .slick-dots li button { position:relative; display:block; width:0.75rem; height:0.75rem; cursor:pointer; color:transparent; font-size:0; line-height:0; border:0; outline:none; border-radius: 100%; background:#fff; box-shadow: 0px 1px 3px #fff;}
+.visual .slick-dots li button:hover, .slick-dots li button:focus { outline:none; }
+.visual .slick-dots li button:hover:before, .slick-dots li button:focus:before { opacity:1; }
+.visual .slick-dots li.slick-active button { background:#fff2cc }
 .content ul {
   text-align: center;
 }
@@ -234,6 +239,7 @@ section h3 {
   width:30%;
   margin:0 1% 5%;
   text-align: left;
+  vertical-align: top;
 
 }
 .content ul li img {
@@ -251,4 +257,125 @@ section h3 {
 .content ul li dl dd.beforePrice {
   text-decoration: line-through;
   color:#666;;
+}
+
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
 }
