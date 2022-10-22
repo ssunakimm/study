@@ -1,26 +1,29 @@
 let data = [
     {
       id : 0,
-      title : "White and Black",
+      title : "[SET] COLLAR SWEAT SET-UP",
       content : "Born in France",
-      beforePrice : 260000,
-      currentPrice : 120000
+      img : "/1.jpg",
+      beforePrice : 146000,
+      currentPrice : 109000
     },
   
     {
       id : 1,
-      title : "Red Knit",
+      title : "[SET] RR Henryneck Sweat Set-Up",
       content : "Born in Seoul",
-      beforePrice : 260000,
-      currentPrice : 110000
+      img : "/2.jpg",
+      beforePrice : 161000,
+      currentPrice : 109000
     },
   
     {
       id : 2,
-      title : "Grey Yordan",
+      title : "[SET] Taping Collar Sweat Set-Up",
       content : "Born in the States",
-      beforePrice : 260000,
-      currentPrice : 130000
+      img : "/3.jpg",
+      beforePrice : 161000,
+      currentPrice : 104700
     }
   ] 
 

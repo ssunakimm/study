@@ -7,45 +7,47 @@ function App() {
   return (
     <div className="wrapper">
       <header className='header'>
+        <h1><a href="dd">론론</a></h1>
         <nav>
           <ul>
             <li>
               <a href="dd">About</a>
-              <ul>
+              <ul className='subDep'>
                 <li><a href="dd">안뇽</a></li>
               </ul>
             </li>
             <li>
               <a href="dd">About</a>
-              <ul>
+              <ul className='subDep'>
                 <li><a href="dd">안뇽</a></li>
               </ul>
             </li>
             <li>
               <a href="dd">About</a>
-              <ul>
+              <ul className='subDep'>
                 <li><a href="dd">안뇽</a></li>
               </ul>
             </li>
             <li>
               <a href="dd">About</a>
-              <ul>
+              <ul className='subDep'>
                 <li><a href="dd">안뇽</a></li>
               </ul>
             </li>
           </ul>
         </nav>
       </header>
-      <div className="content">
+      <section className='visual'></section>
+      <section className='content'>
         <ul>
-          {
-            item.map((item,i)=>{
-              return <Item item={item} key={item.id}></Item>
-            })    
-          }
-          
-        </ul>
-      </div>
+            {
+              item.map((item,i)=>{
+                return <Item item={item} key={item.id}></Item>
+              })    
+            }
+            
+          </ul>
+      </section>
       <footer className='footer'>
 
       </footer>
@@ -57,13 +59,13 @@ function Item(props){
   return (
     <li>
       <a href="aa">
-        <img src="aa" />
-        <b>{props.item.title}</b>
+        <img src={props.item.img} alt={props.item.title}/>
       </a>
-      <ul>
-        <li className='beforePrice'>{props.item.beforePrice}</li>
-        <li className='currentPrice'>{props.item.currentPrice}</li>
-      </ul>
+      <dl>
+        <dt>{props.item.title}</dt>
+        <dd className='beforePrice'>{props.item.beforePrice}원</dd>
+        <dd className='currentPrice'>{props.item.currentPrice}원</dd>
+      </dl>
       
     </li>
   )
