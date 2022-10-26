@@ -268,8 +268,18 @@ section h3 {
   text-decoration: line-through;
   color:#666;;
 }
-
-
+.footer {
+    width:94%;
+    margin:1.5vw auto;
+    padding-left:170px;
+    box-sizing: border-box;
+}
+.footer ul li {
+    line-height: 1.75;
+}
+.footer .menu {
+    margin-bottom: 30px;
+}
 /* Slider */
 .slick-slider
 {

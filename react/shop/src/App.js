@@ -72,8 +72,32 @@ function App() {
             
           </ul>
       </section>
-      <footer className='footer'>
-
+      <footer className="footer">
+        <div className="menu">    
+            <ul>
+                <li><a href="/shopinfo/company.html">About us</a></li>
+                <li><a href="/member/mall_agreement.html">Terms and Conditions</a></li>
+                <li><a href="/member/privacy.html">Privacy Policy</a></li>
+                <li><a href="/shopinfo/guide.html">Guide</a></li>
+            </ul>
+        </div>
+                
+        <div className="info">
+          <ul>
+            <li className="tel">
+              <a href="tel:032-246-6011">T.032-246-6011</a>
+            </li>
+            <li>Mon-Fri 11:00~16:00<br />
+                Lunch 12:00~14:00<br />
+                Weekend, Holiday off<br />
+                <br />
+                신한 140-013-540220 <br />
+                주식회사 빅트리코퍼레이션 배가영 
+            </li>
+            <li><address>인천광역시 연수구 인천타워대로 323 (송도동) 송도센트로드 D308호</address></li>
+          </ul>                       
+          <p className="copyright">Copyright© RONRON All Rights Reserved &amp; Hosting by Cafe24</p>
+        </div>
       </footer>
     </div>
   );
