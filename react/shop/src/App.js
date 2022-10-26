@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="wrapper">
       <header className='header'>
-        <h1><a href="dd"><img src="/logo.svg" alt="론론"/></a></h1>
+        <h1><Link to="/"><img src="/logo.svg" alt="론론"/></Link></h1>
         <nav onMouseOver={() => setIsHovering(1)} onMouseOut={() => setIsHovering(0)}>
           <ul>
             <li>
@@ -77,17 +77,17 @@ function App() {
             </section>
           </>
          } />
-        <Route path="/detail" element={ <div>상세페이지임</div> } />
-        <Route path="/about" element={ <div>어바웃페이지임</div> } />
+        <Route path="/detail" element={ <About></About> } />
+        <Route path="/about" element={ <About></About> } />
       </Routes>
       
       <footer className="footer">
         <div className="menu">    
             <ul>
-                <li><a href="/shopinfo/company.html">About us</a></li>
-                <li><a href="/member/mall_agreement.html">Terms and Conditions</a></li>
-                <li><a href="/member/privacy.html">Privacy Policy</a></li>
-                <li><a href="/shopinfo/guide.html">Guide</a></li>
+                <li><Link to="/shopinfo/company.html">About us</Link></li>
+                <li><Link to="/member/mall_agreement.html">Terms and Conditions</Link></li>
+                <li><Link to="/member/privacy.html">Privacy Policy</Link></li>
+                <li><Link to="/shopinfo/guide.html">Guide</Link></li>
             </ul>
         </div>
                 
@@ -126,6 +126,18 @@ function Item(props){
       </dl>
       
     </li>
+  )
+}
+
+function About(){
+  return (
+    <section className="about">
+      <h3>About</h3>
+      <b>론론(RONRON)은 고양이가 행복감을 느낄 때 내는 <br />'갸르릉' 거리는 소리를 표현한 프랑스어입니다</b>
+      <p>론론(RONRON)은 고양이가 행복감을 느낄 때 내는 <br />'갸르릉' 거리는 소리를 표현한 프랑스어입니다.<br />익숙하지만 새로움을, 새롭지만 편안함을 주는 브랜드로 <br />데일리룩으로 선택하기 쉬운 디자인을 통해 <br />론론만의 미니멀하지만 유니크한 룩을 제공합니다. <br />Update the casual look with RONRON.</p>
+      <img src="/about1.jpg" alt="론론 옷을 입은 모델"/>
+      <p>RONRON means ‘the sound a cat makes when he/she feels comfortable’ in French. <br />Offering simple yet unique essentials, <br />we create pieces that is easy to choose for its daily look. <br />Be (you) with RONRON in daily life / every days / every moments <br />Update the casual look with RONRON.</p>
+    </section>
   )
 }
 
