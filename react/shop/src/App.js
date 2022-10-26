@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css';
 import data from './data.js'
 import Slider from "react-slick";
@@ -24,29 +25,29 @@ function App() {
         <nav onMouseOver={() => setIsHovering(1)} onMouseOut={() => setIsHovering(0)}>
           <ul>
             <li>
-              <a href="dd" >About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="dd" >Shop</a>
+              <Link to="/shop">Shop</Link>
               {
                 isHovering ? 
                 <ul className='subDep'>
-                  <li><a href="dd">New in</a></li>
-                  <li><a href="dd">Outer</a></li>
-                  <li><a href="dd">Top</a></li>
-                  <li><a href="dd">Bottom</a></li>
+                  <li><Link to="/newIn">New in</Link></li>
+                  <li><Link to="/outer">Outer</Link></li>
+                  <li><Link to="/top">Top</Link></li>
+                  <li><Link to="/bottom">Bottom</Link></li>
                 </ul> : null
               }
               
             </li>
             <li>
-              <a href="dd">Board</a>
+              <Link to="/board">Board</Link>
               {
                 isHovering ? 
                 <ul className='subDep'>
-                  <li><a href="dd">News</a></li>
-                  <li><a href="dd">Q&A</a></li>
-                  <li><a href="dd">Review</a></li>
+                  <li><Link to="/news">News</Link></li>
+                  <li><Link to="/qna">Q&A</Link></li>
+                  <li><Link to="/review">Review</Link></li>
                 </ul> : null
               }
               
@@ -54,24 +55,32 @@ function App() {
           </ul>
         </nav>
       </header>
-      <section className='visual'>
-        <Slider {...settings}>
-          <div><img src="/visual1.jpg" alt="메인 비주얼 슬라이드"/></div>
-          <div><img src="/visual2.jpg" alt="메인 비주얼 슬라이드"/></div>
-          <div><img src="/visual3.jpg" alt="메인 비주얼 슬라이드"/></div>
-        </Slider>
-        
-      </section>
-      <section className='content'>
-        <ul>
-            {
-              item.map((item,i)=>{
-                return <Item item={item} key={item.id}></Item>
-              })    
-            }
-            
-          </ul>
-      </section>
+      <Routes>
+        <Route path="/" element={ 
+          <>
+            <section className='visual'>
+              <Slider {...settings}>
+                <div><img src="/visual1.jpg" alt="메인 비주얼 슬라이드"/></div>
+                <div><img src="/visual2.jpg" alt="메인 비주얼 슬라이드"/></div>
+                <div><img src="/visual3.jpg" alt="메인 비주얼 슬라이드"/></div>
+              </Slider>        
+            </section>
+            <section className='content'>
+              <ul>
+                  {
+                    item.map((item,i)=>{
+                      return <Item item={item} key={item.id}></Item>
+                    })    
+                  }
+                  
+                </ul>
+            </section>
+          </>
+         } />
+        <Route path="/detail" element={ <div>상세페이지임</div> } />
+        <Route path="/about" element={ <div>어바웃페이지임</div> } />
+      </Routes>
+      
       <footer className="footer">
         <div className="menu">    
             <ul>
