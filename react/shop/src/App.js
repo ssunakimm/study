@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, useParams } from 'react-router-dom'
 import './App.css';
 import data from './data.js'
 import Slider from "react-slick";
@@ -116,7 +116,7 @@ function App() {
 function Item(props){
   return (
     <li>
-      <Link to="/detail/:id"><img src={props.item.img} alt={props.item.title}/></Link>
+      <Link to={{ pathname: `/detail/${props.item.id}` }}><img src={props.item.img} alt={props.item.title}/></Link>
       <dl>
         <dt>{props.item.title}</dt>
         <dd className='beforePrice'>{props.item.beforePrice}원</dd>
@@ -139,10 +139,20 @@ function About(){
   )
 }
 function Detail(props){
+  let {id} = useParams();
   return (
     <section className="detail">
-      디테일페이지임
-      {props.title}
+      <article className="img">
+        <img src={props.item[id].img} alt={props.item[id].title}/>
+      </article>
+      <article className="info">
+        <dl>
+          <dt>{props.item[id].title}</dt>
+          <dd className='beforePrice'>Retail Price <br />{props.item[id].beforePrice}원</dd>
+          <dd className='currentPrice'>Price <br />{props.item[id].currentPrice}원</dd>
+        </dl>
+      </article>
+      
     </section>
 
   )

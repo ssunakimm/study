@@ -280,7 +280,14 @@ section h3 {
     width: auto;
     margin:0 auto;
 }
-
+.detail .img {
+    float:left;
+    width:45%;
+}
+.detail .info {
+    float:left;
+    width:45%;
+}
 
 
 
