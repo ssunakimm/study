@@ -78,7 +78,7 @@ function App() {
           </>
          } />
         <Route path="/about" element={ <About></About> } />
-        <Route path="/detail" element={ <Detail></Detail> } />
+        <Route path="/detail/:id" element={ <Detail item={item}></Detail> } />
       </Routes>
       
       <footer className="footer">
@@ -116,7 +116,7 @@ function App() {
 function Item(props){
   return (
     <li>
-      <Link to="/detail"><img src={props.item.img} alt={props.item.title}/></Link>
+      <Link to="/detail/:id"><img src={props.item.img} alt={props.item.title}/></Link>
       <dl>
         <dt>{props.item.title}</dt>
         <dd className='beforePrice'>{props.item.beforePrice}원</dd>
@@ -138,10 +138,11 @@ function About(){
     </section>
   )
 }
-function Detail(){
+function Detail(props){
   return (
     <section className="detail">
       디테일페이지임
+      {props.title}
     </section>
 
   )
