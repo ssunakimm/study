@@ -255,8 +255,6 @@ section h3 {
 .content ul li img {
   width:100%;
 }
-.content ul li dl {
-}
 .content ul li dl dt{
   margin:0.7rem 0.5rem;
   font-size: 14px;
@@ -266,7 +264,7 @@ section h3 {
 }
 .content ul li dl dd.beforePrice {
   text-decoration: line-through;
-  color:#666;;
+  color:#666;
 }
 .about {
     text-align: center;

@@ -77,8 +77,8 @@ function App() {
             </section>
           </>
          } />
-        <Route path="/detail" element={ <About></About> } />
         <Route path="/about" element={ <About></About> } />
+        <Route path="/detail" element={ <Detail></Detail> } />
       </Routes>
       
       <footer className="footer">
@@ -116,9 +116,7 @@ function App() {
 function Item(props){
   return (
     <li>
-      <a href="aa">
-        <img src={props.item.img} alt={props.item.title}/>
-      </a>
+      <Link to="/detail"><img src={props.item.img} alt={props.item.title}/></Link>
       <dl>
         <dt>{props.item.title}</dt>
         <dd className='beforePrice'>{props.item.beforePrice}원</dd>
@@ -133,11 +131,19 @@ function About(){
   return (
     <section className="about">
       <h3>About</h3>
-      <b>론론(RONRON)은 고양이가 행복감을 느낄 때 내는 <br />'갸르릉' 거리는 소리를 표현한 프랑스어입니다</b>
+      <b>론론(RONRON)은 고양dd이가 행복감을 느낄 때 내는 <br />'갸르릉' 거리는 소리를 표현한 프랑스어입니다</b>
       <p>론론(RONRON)은 고양이가 행복감을 느낄 때 내는 <br />'갸르릉' 거리는 소리를 표현한 프랑스어입니다.<br />익숙하지만 새로움을, 새롭지만 편안함을 주는 브랜드로 <br />데일리룩으로 선택하기 쉬운 디자인을 통해 <br />론론만의 미니멀하지만 유니크한 룩을 제공합니다. <br />Update the casual look with RONRON.</p>
       <img src="/about1.jpg" alt="론론 옷을 입은 모델"/>
       <p>RONRON means ‘the sound a cat makes when he/she feels comfortable’ in French. <br />Offering simple yet unique essentials, <br />we create pieces that is easy to choose for its daily look. <br />Be (you) with RONRON in daily life / every days / every moments <br />Update the casual look with RONRON.</p>
     </section>
+  )
+}
+function Detail(){
+  return (
+    <section className="detail">
+      디테일페이지임
+    </section>
+
   )
 }
 
