@@ -148,9 +148,16 @@ function Detail(props){
       <article className="info">
         <dl>
           <dt>{props.item[id].title}</dt>
-          <dd className='beforePrice'>Retail Price <br />{props.item[id].beforePrice}원</dd>
-          <dd className='currentPrice'>Price <br />{props.item[id].currentPrice}원</dd>
+          <dd className='beforePrice'><span>Retail Price</span> {props.item[id].beforePrice}원</dd>
+          <dd className='currentPrice'><span>Price</span> {props.item[id].currentPrice}원</dd>
         </dl>
+        <div className="btns">
+          <button type="button">Buy Nuw</button>            
+        </div>
+        <div className="btns double">
+          <button type="button" className="black">Add to Cart</button>
+          <button type="button" className="black">Add to Wish</button>
+        </div>
       </article>
       
     </section>

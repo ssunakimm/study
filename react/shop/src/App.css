@@ -200,7 +200,7 @@ input:-webkit-autofill {
 
 .header nav ul li a {
     display: block;
-    padding: 2.5rem 4rem;
+    padding: 1.5rem 2rem;
     font-size: 1rem;
     color: #000;
     line-height:1;
@@ -281,15 +281,27 @@ section h3 {
     margin:0 auto;
 }
 .detail .img {
-    float:left;
-    width:45%;
+    width:100%;
 }
 .detail .info {
-    float:left;
-    width:45%;
+    width:94%;
+    margin:3.5vw auto;
 }
-
-
+.detail dl dt{
+    margin:0.7rem 0.5rem;
+    font-size: 14px;
+}
+.detail dl dd{
+    margin:0.6rem 0.5rem;
+}
+.detail dl dd.beforePrice {
+    text-decoration: line-through;
+    color:#666;
+}
+.detail dl dd span {
+    display: block;
+    text-decoration: none;
+}
 
 
 .footer {
@@ -423,4 +435,42 @@ section h3 {
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+.btns {
+    margin-bottom: 8px;;
+}
+.btns button {
+    border:1px solid #333;
+    width:100%;
+    padding:15px;
+    box-sizing: border-box;
+    background:#fff;
+}
+.btns button.black {
+    background:#222;
+    border-color:#fff;
+    color:#fff;
+}
+.btns.double {
+    display: flex;
+    justify-content: space-between;
+}
+.btns.double button {
+    width:calc(50% - 4px);
+}
+
+@media (min-width:1024px) {
+    
+    .header nav ul li a {
+        padding: 2.5rem 4rem;
+    }
+    .detail .img {
+        float:left;
+        width:45%;
+    }
+    .detail .info {
+        float:left;
+        width:45%;
+    }
+    
 }
